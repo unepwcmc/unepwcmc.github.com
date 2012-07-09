@@ -976,3 +976,6 @@ CSS3Utility.prototype.debug = function(text) {
  
 // Object Instance
 var css3MC = new CSS3MultiColumn();
+
+
+

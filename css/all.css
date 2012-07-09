@@ -54,7 +54,8 @@ body {	margin:0;	color:#333;	font:11px/14px Helvetica, Arial, sans-serif;	ba
 	position:relative;
 	margin:0 0 0 19px;
 }
-#nav .active:after {
+#nav .active:after,
+#nav .hover:after {
 	content:'';
 	border-left:7px solid transparent;	border-right:7px solid transparent;
 	border-top:7px solid #369;
@@ -183,31 +184,34 @@ body {	margin:0;	color:#333;	font:11px/14px Helvetica, Arial, sans-serif;	ba
 	column-gap: 38px;
 }
 /* gallery */
-.gallery {
-	overflow:hidden;
-	margin:0 0 28px;
-}
+.gallery {margin:0 0 28px;}
 #main .gallery h2 {
 	font:10px/13px Georgia, 'Times New Roman', Times, serif;
 	color:#690;
 	text-transform:uppercase;
 	margin:0 0 1px;
 }
+.gallery .g1 {
+	border-bottom:1px solid #ebebeb;
+	box-shadow:inset 0 -1px 0 #fff, inset 0 -3px 0 #ebebeb;
+	-webkit-box-shadow:inset 0 -1px 0 #fff, inset 0 -3px 0 #ebebeb;
+	position:relative;
+}
+.gallery:after,
+.gallery .g1:after {
+	content:'';	display:block;	clear:both;
+}
 .gallery .mask {
 	overflow:hidden;
+	padding:0 12px 23px;
+	margin:0 -12px;
 	position:relative;
-	height:172px;
-	margin:0 0 0 -12px;
-	border-bottom:1px solid #ebebeb;
-	box-shadow:inset 0 -1px 0 #fff, inset 0 - 3px 0 #ebebeb;
-	-webkit-box-shadow:inset 0 -1px 0 #fff, inset 0 - 3px 0 #ebebeb;	padding:0 0 23px;
 }
 .gallery.style2 .mask {
-	height:277px;
 	padding-bottom:6px;
 	position:relative;
 }
-.gallery .mask:after {
+.gallery .g1:before {
 	content:'';	position:absolute;
 	bottom:0;
 	left:0;	right:0;	height:2px;
@@ -227,7 +231,7 @@ body {	margin:0;	color:#333;	font:11px/14px Helvetica, Arial, sans-serif;	ba
 	padding:7px 11px 25px 12px;
 	position:relative;
 }
-#main .gallery h3 {
+.gallery .mask ul > li:first-child {padding-left:0;}#main .gallery h3 {
 	font-size:16px;
 	line-height:19px;
 	margin:0 0 11px;
@@ -313,10 +317,7 @@ body {	margin:0;	color:#333;	font:11px/14px Helvetica, Arial, sans-serif;	ba
 	text-transform:uppercase;
 }
 .gallery .download.doc {background:url(../images/ico-doc.png) no-repeat;}
-.gallery.style3 .mask {
-	height:223px;
-	padding-bottom:30px;
-}
+.gallery.style3 .mask {padding-bottom:30px;}
 /* info-section */
 .info-section {
 	overflow:hidden;
@@ -334,10 +335,20 @@ body {	margin:0;	color:#333;	font:11px/14px Helvetica, Arial, sans-serif;	ba
 .info-section .visual-list li {
 	float:left;
 	width:115px;
-	margin:0 0 1px 1px;
+	margin:0 0 -1px 1px;
 }
 .info-section .visual-list li:hover {
-	padding:7px;
+	position:relative;
+	z-index:20;
+}
+.info-section .visual-list .visual {
+	display:block;
+	vertical-align:baseline;
+	position:relative;	z-index:15;
+	border:1px solid transparent;
+}
+.info-section .visual-list li:hover .visual {border-color:#999;}
+.info-section .visual-list .text {
 	background: #fdfdfd;
 	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZkZmRmZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjM2JSIgc3RvcC1jb2xvcj0iI2YzZjNmMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc5JSIgc3RvcC1jb2xvcj0iI2UxZTFlMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iI2RmZGZkZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkOGQ4ZDgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
 	background: -moz-linear-gradient(top,  #fdfdfd 0%, #f3f3f3 36%, #e1e1e1 79%, #dfdfdf 80%, #d8d8d8 100%);
@@ -346,19 +357,13 @@ body {	margin:0;	color:#333;	font:11px/14px Helvetica, Arial, sans-serif;	ba
 	background: -o-linear-gradient(top,  #fdfdfd 0%,#f3f3f3 36%,#e1e1e1 79%,#dfdfdf 80%,#d8d8d8 100%);
 	background: -ms-linear-gradient(top,  #fdfdfd 0%,#f3f3f3 36%,#e1e1e1 79%,#dfdfdf 80%,#d8d8d8 100%);
 	background: linear-gradient(to bottom,  #fdfdfd 0%,#f3f3f3 36%,#e1e1e1 79%,#dfdfdf 80%,#d8d8d8 100%);
-	margin:-7px -7px -6px -6px;
-	position:relative;
-}
-.info-section .visual-list .visual {
-	display:block;
-	vertical-align:baseline;
-}
-.info-section .visual-list .text {
+	padding:142px 7px 12px;
+	position:absolute;	top:-7px;	left:-8px;	right:-9px;
 	font-size:11px;
 	line-height:14px;
 	letter-spacing:-1px;
 	color:#666;
-	display:none;	padding:2px 0 0;
+	display:none;	z-index:10;
 }
 .info-section .visual-list li:hover .text {display:block;}
 .info-section .visual-list .text .name {
@@ -366,7 +371,7 @@ body {	margin:0;	color:#333;	font:11px/14px Helvetica, Arial, sans-serif;	ba
 	line-height:17px;
 	color:#333;
 	display:block;
-	margin:-1px 0 0;
+	margin:-1px 0 -2px;
 }
 .info-section .details {
 	display:block;
@@ -441,36 +446,35 @@ body {	margin:0;	color:#333;	font:11px/14px Helvetica, Arial, sans-serif;	ba
 	line-height:12px;
 }
 #footer .contact-column p {margin:0;}
-#footer .holder .frame .heading {
-	width:81px;
-	float:left;
-	border-top:3px solid #333;
-	padding:14px 3px 0;
-	font-weight:normal;
-}
-#footer .holder .frame {overflow:hidden;}
 #footer .holder .list {
 	margin:0;
 	padding:0;	list-style:none;
 	overflow:hidden;
 }
 #footer .holder .list li {
-	float:left;	border-top:3px solid #999;
-	padding:14px 0 0;
-	margin:0 0 0 11px;
-	width:14.82%;
+	float:left;	margin:0 0 0 11px;
+	width:12.71%;
 }
 #footer .holder .list a {
 	color:#999;
-	margin:0 3px;
-	display:inline-block;	vertical-align:top;
+	display:block;
+	padding:14px 0 0;
+	border-top:3px solid #999;
 }
-#footer .holder .list .active {border-top-color:#690;}
-#footer .holder .list .active a,
 #footer .holder .list a:hover {
+	color:#333;
+	text-decoration:none;
+	border-top-color:#333;
+}
+#footer .holder .list a:hover:after {
+	content:'»';	display:block;
+	margin:-2px 0 0 1px}
+#footer .holder .list .active a {
 	color:#690;
 	text-decoration:none;
+	border-top-color:#690;
 }
+#footer .holder .list .active a:after {display:none;}
 #footer > p {
 	margin:0;
 	display:inline-block;	vertical-align:top;}
