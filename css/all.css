@@ -301,7 +301,7 @@ a:hover {text-decoration:underline;}
 	padding:7px 11px 25px 12px;
 	position:relative;
 }
-.gallery .mask ul > li:first-child {padding-left:0;}
+.gallery .mask ul > li:first-child {padding-left:14px;}
 #main .gallery h3 {
 	font-size:16px;
 	line-height:19px;
