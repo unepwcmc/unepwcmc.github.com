@@ -416,10 +416,11 @@ a:hover {text-decoration:underline;}
 	bottom:16px;
 	background:url(../images/ico-pdf.png) no-repeat;
 	font-size:10px;
-	line-height:16px;
+/*	line-height:16px;*/
 	text-transform:uppercase;
 }
 .gallery .download.doc {background:url(../images/ico-doc.png) no-repeat;}
+.gallery .download.mail {background:url(../images/ico-email.jpeg) no-repeat;}
 .gallery.style3 .mask {padding-bottom:30px;}
 /* info-section */
 .info-section {
