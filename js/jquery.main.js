@@ -11,7 +11,7 @@ jQuery(function(){
 	initSameHeight();
 	initCarousel();
 	initGalleryFix();
-	initHoverImages();
+	// initHoverImages();
 });
 
 // init navigation hover
