@@ -112,7 +112,7 @@ div.navbar {
   color: #369;
 }
 
-#main article .img-polaroid {
+#main article figure.img-polaroid {
   padding-bottom: 0;
 }
 
@@ -365,10 +365,16 @@ blockquote {
     padding-left: 20px;
     padding-right: 20px;
   }
+
   .header .introduction {
     column-count: 1;
     -webkit-column-count: 1;
     -moz-column-count: 1;
+  }
+
+  #main article .thumb {
+    text-align: center;
+    display: block;
   }
 
   .about-department {
