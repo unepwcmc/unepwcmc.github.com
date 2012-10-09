@@ -1,0 +1,420 @@
+/* Twitter bootstrap variables
+ * ===========================
+ * @textColor: #666
+ * @linkColor: #369
+ * @linkColorHover: #369
+ * @headingsColor: #369
+ * @navbarBackground: #369
+ * @navbarBackgroundHighlight: 369
+ */
+
+div.navbar {
+  position: relative;
+  border-bottom: 4px solid #690;
+}
+
+.navbar .brand {
+  position: absolute;
+  background: #FFF url(../img/logo.png) no-repeat center center;
+  height: 57px;
+  width: 89px;
+  margin-left: 0;
+}
+
+.navbar .brand span {
+  display: none;
+}
+
+.header {
+  background-color: #E3ECCF;
+}
+
+.header .container {
+  background-image: url(../img/bg-header.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+
+  padding-top: 40px;
+}
+
+.header .introduction {
+  column-count: 3;
+  column-gap: 38px;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 38px;
+  -moz-column-count: 3;
+  -moz-column-gap: 38px;
+}
+
+.header .side-box {
+  background-color: #FAFCF6;
+}
+
+.header .side-box h2 {
+  background-color: #4978A6;
+  color: #fff;
+
+  position: relative;
+  padding: 8px 12px 9px;
+  margin-top: 0;
+
+  font-size: 26px;
+  line-height: 26px;
+}
+
+.header .side-box h2::after {
+  content: '';
+  position: absolute;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 11px solid #4978A6;
+  bottom: -10px;
+  right: 14px;
+}
+
+.header .side-box ul {
+  padding: 5px 17px 9px 26px;
+}
+
+.header .side-box ul li {
+  position: relative;
+  padding-bottom: 13px;
+}
+
+.header .side-box ul li a {
+  color: #4978A6;
+  font-weight: bold;
+}
+
+.header .side-box ul li::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: -9px;
+  width: 2px;
+  height: 13px;
+  background: #4978A6;
+}
+
+#main h1 {
+  font-size: 13px;
+  line-height: 16px;
+  color: #690;
+  font-weight: normal;
+}
+
+#main article h3 {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+#main article h3 a {
+  color: #369;
+}
+
+#main article .img-polaroid {
+  padding-bottom: 0;
+}
+
+#vacancies {
+  margin-bottom: 35px;
+}
+
+#vacancies article {
+  background-color: #ECECEC;
+  padding-top: 10px;
+  min-height: 150px;
+  position: relative;
+}
+
+#vacancies article h3 {
+  margin-bottom: 35px;
+}
+
+#vacancies article > * {
+  margin: 0 10px;
+}
+
+#vacancies article .date {
+  border-top: 4px solid #999;
+  display: block;
+  color: #999;
+  font-size: 11px;
+  line-height: 14px;
+  padding: 6px 0 10px;
+}
+
+#vacancies article .mail {
+  padding: 16px 0 10px;
+  display: block;
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+}
+
+#vacancies article .mail::before {
+  content: '';
+  background: url(../img/ico-email.jpg);
+  display: inline-block;
+  margin-right: 10px;
+  height: 11px;
+  width: 15px;
+}
+
+.about-department {
+  background-color: #333;
+  color: #fff;
+  padding-top: 35px;
+  padding-bottom: 15px;
+}
+
+.about-department h3, .about-department a {
+  color: #fff;
+}
+
+.about-department .breadcrumb li {
+  text-shadow: none;
+  color: #690;
+}
+
+.about-department .informatics p {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.about-department .informatics h3 {
+  line-height: 26px;
+}
+
+.about-department .informatics .contact-box {
+  background: #292929;
+  margin-left: 0;
+  margin-bottom: 20px;
+}
+
+.about-department .informatics .contact-box div.span2 {
+  padding: 10px 0;
+}
+
+.about-department .informatics .contact-box div.span5 {
+  padding: 25px 0;
+}
+
+.about-department .informatics .contact-box div:first-child {
+  margin-left: 0;
+}
+
+.about-department .informatics .contact-box .heading {
+  padding-top: 4px;
+  margin-left: 10px;
+  border-top: 4px solid #690;
+  color: #690;
+}
+
+.about-department .informatics .contact-box a {
+  font-weight: bold;
+}
+
+.about-department .team ul {
+  width: 464px;
+  float: right;
+}
+
+.about-department .team ul li {
+  float: left;
+  margin-top: -1px;
+  margin-left: 1px;
+}
+
+.about-department .team ul li .name {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.about-department .team ul li .text {
+	background: #fdfdfd;
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZkZmRmZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjM2JSIgc3RvcC1jb2xvcj0iI2YzZjNmMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc5JSIgc3RvcC1jb2xvcj0iI2UxZTFlMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iI2RmZGZkZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkOGQ4ZDgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #fdfdfd 0%, #f3f3f3 36%, #e1e1e1 79%, #dfdfdf 80%, #d8d8d8 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(36%,#f3f3f3), color-stop(79%,#e1e1e1), color-stop(80%,#dfdfdf), color-stop(100%,#d8d8d8));
+	background: -webkit-linear-gradient(top,  #fdfdfd 0%,#f3f3f3 36%,#e1e1e1 79%,#dfdfdf 80%,#d8d8d8 100%);
+	background: -o-linear-gradient(top,  #fdfdfd 0%,#f3f3f3 36%,#e1e1e1 79%,#dfdfdf 80%,#d8d8d8 100%);
+	background: -ms-linear-gradient(top,  #fdfdfd 0%,#f3f3f3 36%,#e1e1e1 79%,#dfdfdf 80%,#d8d8d8 100%);
+	background: linear-gradient(to bottom,  #fdfdfd 0%,#f3f3f3 36%,#e1e1e1 79%,#dfdfdf 80%,#d8d8d8 100%);
+
+	position: absolute;
+	top: -7px;
+	left: -8px;
+	right: -9px;
+	z-index: 10;
+
+	color: #666;
+	padding: 142px 7px 12px;
+	display: none;
+
+	font-size: 12px;
+	line-height: 14px;
+	letter-spacing: -1px;
+}
+
+.about-department .team ul li:hover .text {
+  display: block;
+}
+
+.about-department .team ul li:hover {
+  position: relative;
+  z-index: 20;
+}
+
+.about-department .team ul li:hover img {
+  border-color: #999;
+  position: relative;
+  z-index: 15;
+}
+
+footer {
+  padding-top: 20px;
+}
+
+footer .contact-us h3 {
+  font-size: 14px;
+  line-height: 17px;
+  border-top: 4px solid #333;
+  padding-top: 4px;
+  color: #333;
+}
+
+footer .contact-us address {
+  font-size: 11px;
+  line-height: 12px;
+}
+
+footer .contact-us .phone {
+  font-size: 11px;
+  line-height: 12px;
+}
+
+.breadcrumb {
+  padding: 0;
+  background-color: transparent;
+}
+
+blockquote {
+  padding-left: 0;
+  border-left: 0;
+  font-style: italic;
+}
+
+@media (min-width: 980px) and (max-width: 1199px) {
+  .about-department .team ul {
+    width: 348px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .navbar.navbar-fixed-top {
+    margin-bottom: 0;
+  }
+  
+  .navbar.navbar-fixed-top .navbar-inner {
+    padding-top: 0;
+  }
+
+  .navbar.navbar-fixed-top .container {
+    width: 724px;
+  }
+
+  .about-department .team ul {
+    width: 232px;
+  }
+  
+  .header .side-box h2 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+  
+  .header .side-box ul {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar.navbar-fixed-top {
+    margin-bottom: 0;
+  }
+  
+  .navbar.navbar-fixed-top .navbar-inner {
+    padding-top: 0;
+  }
+
+  .navbar.navbar-fixed-top .container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .header {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .header .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .header .introduction {
+    column-count: 1;
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+  }
+
+  .about-department {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  
+  .about-department .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .about-department .informatics .contact-box div.span2 {
+    padding: 20px 0 0;
+  }
+
+  .about-department .informatics .contact-box .heading {
+    display: inline;
+  }
+
+  .about-department .informatics .contact-box div.span5 {
+    padding-left: 10px;
+  }
+  
+  .about-department .team ul {
+    float: none;
+    width: 348px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  #main article {
+    clear: both;
+    float: left;
+    margin-bottom: 15px;
+  }
+
+  #main article .thumb {
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 385px) {
+  .about-department .team ul {
+    width: 232px;
+  }
+}
